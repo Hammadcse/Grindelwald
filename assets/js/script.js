@@ -1,3 +1,4 @@
+// Unique Room slider
 $('.room_slider').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -14,7 +15,6 @@ $('.room_slider').slick({
       {
         breakpoint: 768,
         settings: {
-          arrows: false,
           centerMode: true,
           centerPadding: '40px',
           slidesToShow: 3
@@ -23,9 +23,32 @@ $('.room_slider').slick({
       {
         breakpoint: 480,
         settings: {
-          arrows: false,
           centerMode: true,
           centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
+// Testimonial slider
+$('.testimonial_slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    speed: 300,
+    loop:false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
           slidesToShow: 1
         }
       }
