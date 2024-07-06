@@ -453,3 +453,86 @@ ul{
     content: url(../images/right_arrow.png);
 }
 /* Unique Rooms style ends */
+
+/* Call to Action style starts */
+.cta {
+    background-image: url(../images/primary_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cta_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.cta_text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.cta_text h2 {
+    font-family: 'Boska',sans-serif;
+    font-size: 68px;
+    font-weight: 400;
+    line-height: 88.4px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+.cta_text h2 span{
+    color: var(--secondary-color);    
+}
+.cta_text p{
+    font-family: 'Switzerv', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 23.76px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 60px;
+}
+.cta_text .form_group{
+    width: 570px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.cta_text .form_group input {
+    background: #fff;
+    padding: 10px 20px;
+    height: 100%;
+    flex-grow: 2;
+    border: 0;
+    font-family: 'Switzerv', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23.76px;
+    text-align: left;
+    color: var(--primary-color);
+}
+.cta_text .form_group input::placeholder{
+    color: #BBBBBB;
+}
+.cta_text .form_group button{
+    font-family: 'Switzerv', sans-serif;
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23.76px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    border-radius: 0;
+    height: 100%;
+}
+/* Call to Action style ends */
