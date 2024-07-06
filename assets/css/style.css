@@ -1,0 +1,289 @@
+/* Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'Switzer';
+    src: url('../fonts/Switzer-Regular.otf') format('opentype');
+    src: url('../fonts/Switzer-Medium.otf') format('opentype'),
+         url('../fonts/Switzer-Semibold.otf') format('opentype'),
+         url('../fonts/Switzer-Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Switzerv';
+    src: url('../fonts/Switzer-Variable.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/AvenirNextLTPro-Regular.otf') format('opentype');
+    src: url('../fonts/AvenirNextLTPro-Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Boskav';
+    src: url('../fonts/Boska-Variable.ttf') format('truetype');
+}
+
+/* Basic setup starts*/
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    text-rendering: optimizeLegibility;
+    font-family: 'Switzerv', sans-serif;
+    background: var(--primary-color);
+}
+:root {
+    --primary-color: #1B3936;
+    --secondary-color: #75FF69;
+}
+.container{
+    max-width: 1214px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/* Basic setup end*/
+
+/* Header style starts */
+.hero_section{
+    background-image: url(../images/primary_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+.hero_section nav {
+    z-index: 1;
+    position: relative;
+}
+.hero_section nav ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 29.6px 0;
+    list-style: none;
+}
+.hero_section nav ul li.logo{
+    margin: 0 auto;
+}
+.hero_section nav ul li.logo a img{
+    width: 168.52px;
+}
+.hero_section nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Switzerv', sans-serif;
+}
+.hero_section nav ul li a:hover{
+    color: var(--secondary-color);
+    transition: .3s all ease-in-out;
+}
+.hero_content_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 145px;
+    padding-bottom: 170px;
+    z-index: 1;
+    position: relative;
+}
+.hero_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero_content p {
+    font-family: Switzerv;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 23.76px;
+    text-align: center;
+    color: #fff;
+    margin-top: 35px;
+}
+.hero_img{
+    position: relative;
+}
+.hero_img img{
+    width: 570px;
+    height: 570px;
+    border-radius: 100vh;
+    margin: 0 auto;
+}
+.hero_img h1 {
+    color: #fff;
+    font-family: 'Boska', sans-serif;
+    font-size: 262px;
+    font-weight: 400;
+    line-height: 246.76px;
+    text-align: center;
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.hero_img h1 .title{
+    display: block;
+}
+.hero_img h1 .cosy {
+    transform: translateX(-58px);
+}
+.hero_img h1 .cabin {
+    color: var(--secondary-color);
+    font-style: italic;
+    line-height: 185.55px;
+    transform: translateX(23%);
+}
+.hero_img h1 .wood {
+    position: relative;
+    display: block;
+}
+.hero_img h1 .prep {
+    position: absolute;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 41.6px;
+    text-align: left;
+    top: 27px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.line_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+.line_img a {
+    width: 82px;
+    height: 82px;
+    text-align: center;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    transition: .4s all ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 7px solid #49615E;
+    margin-left: -41px;
+}
+.line_img .play-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.line_img a .play-icon::after {
+    content: "";
+    width: 4rem;
+    height: 4rem;
+    background: var(--secondary-color);
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 50%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation: play-animate 1.2s ease-in-out infinite;
+    margin-left: -25px;
+}
+@keyframes play-animate {
+    0%,
+    30% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: .8;
+    }
+    100% {
+        transform: scale(2.7);
+        opacity: 0;
+    }
+}
+/* Header style ends */
+
+/* Info style starts */
+.info {
+    background: #F9F9F9;
+    padding: 90px 0;
+    z-index: 1;
+    position: relative;
+    margin-top: -20px;
+}
+.info_content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.info_content .left{
+    flex-grow: 2;
+}
+.info_content .right{
+    flex-grow: 1;
+}
+.info_content .left img {
+    width: 203px;
+    margin-bottom: 35px;
+}
+.info_content .left p{
+    font-family: Switzerv;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31.68px;
+    text-align: left;
+    color: var(--primary-color);
+}
+.info_content .right ul {
+    display: flex;
+    flex-direction: column;
+    gap: 68px;
+}
+.info_content .right li .sub_text {
+    font-family: Switzerv;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31.68px;
+    text-align: left;
+    color: var(--primary-color);
+    margin-bottom: -32px;
+    display: block;
+}
+.info_content .right li h2{
+    font-family: 'Boska',sans-serif;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 130px;
+    color: var(--primary-color);
+}
+.info_content .right li h2 span{
+    font-family: Switzerv;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31.68px;
+    color: var(--primary-color);
+}
+/* Info style ends */
