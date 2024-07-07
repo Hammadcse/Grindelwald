@@ -1,6 +1,4 @@
 /* Fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 @font-face {
     font-family: 'Switzer';
     src: url('../fonts/Switzer-Regular.otf') format('opentype');
@@ -13,11 +11,6 @@
     src: url('../fonts/Switzer-Variable.ttf') format('truetype');
 }
 
-@font-face {
-    font-family: 'Avenir';
-    src: url('../fonts/AvenirNextLTPro-Regular.otf') format('opentype');
-    src: url('../fonts/AvenirNextLTPro-Bold.otf') format('opentype');
-}
 @font-face {
     font-family: 'Boskav';
     src: url('../fonts/Boska-Variable.ttf') format('truetype');
@@ -730,10 +723,135 @@ ul{
     background: var(--secondary-color);
     color: #fff;
 }
-
 .ftr_cta_content img{
     max-width: 100%;
     width: 203px;
     display: block;
 }
 /* Footer Call to Action style ends */
+
+/* Footer style starts */
+footer .quick_link{
+    background-image: url(../images/flink_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+@media(min-width:1400px){
+    footer .quick_link ul{
+        max-width: 1214px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+footer .quick_link ul{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    align-items: center;
+    justify-content: center;
+}
+footer .quick_link ul li a {
+    color: #fff;
+    position: relative;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    z-index: 1;
+    padding: 107px;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+footer .default-btn span {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    -webkit-transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: 5px;
+}
+footer .default-btn:hover span {
+    width: 225%;
+    height: 562.5px;
+}
+footer .quick_link ul li a div {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-top: 10px;
+}
+footer .quick_link ul li a h2{
+    font-family: 'Boska',sans-serif;
+    font-size: 68px;
+    font-weight: 400;
+    line-height: 88.4px;
+    text-align: left;
+    color: #fff;
+}
+footer .quick_link ul li a p {
+    font-family: 'Switzerv', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.12px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+footer .quick_link ul li a.active p {
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+footer .quick_link ul li a .icon{
+    position: relative;
+}
+footer .quick_link ul li a .icon::after{
+    content: url(../images/down_arrow.svg);
+}
+footer .quick_link ul li a:hover .icon::after{
+    content: url(../images/down_arrow_p.svg);
+}
+footer .quick_link ul li a.active .icon{
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+footer .quick_link ul li a:hover{
+    color: var(--primary-color)
+}
+footer .quick_link ul li a:hover h2{
+    color: var(--primary-color)
+}
+footer .quick_link ul li a:hover p{
+    color: var(--primary-color)
+}
+footer nav {
+    margin-top: -6px;
+    background: #fff;
+}
+footer nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    padding: 18px 0;
+}
+footer nav ul li a{
+    font-family: 'Switzerv', sans-serif;
+    font-size: 18px;
+    line-height: 23.76px;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: .3s all ease-in-out;
+}
+footer nav ul li a:hover{
+    color: var(--secondary-color);
+}
+/* Footer style ends */
